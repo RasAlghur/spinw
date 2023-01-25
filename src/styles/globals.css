@@ -1,0 +1,530 @@
+:root {
+  --background_color: black;
+  --font_color: red;
+  --primary_font_size: 1.5rem;
+  --secondary-font_size: 2rem;
+  --small_font_size: 1.2rem;
+  --semi_small_font_size: 1rem;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #e7e8e8;
+  background: #0f1318;
+  overflow-x: hidden;
+}
+.appWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ................................home...................... */
+.home p {
+  margin: 50px 0;
+}
+.wrapper a {
+  text-decoration: none;
+  color: #ff6600;
+}
+.wrapper a:hover {
+  color: #ff6600;
+}
+
+/* ..........................Explore................. */
+.wrapper {
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+  margin: 20px 0;
+}
+
+.wrapper p:last-child {
+  margin: -10px 0 0;
+}
+.exploreBalance {
+  text-align: right;
+}
+.exploreBalance h5 {
+  color: #ff6600;
+}
+
+/* ............................Dashboard....................... */
+.dash p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  width: 53%;
+}
+
+.dashText h6 {
+  color: #e7e8e8;
+}
+.dashIcons {
+  color: #ff6600;
+}
+
+.dashWrapper {
+  border: 2px solid #ff6600;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashWrapper p {
+  color: #ff6600;
+  font-size: 0.78rem;
+  font-weight: 400;
+  margin: -8px 0 0;
+}
+.dashWrapper p:last-child {
+  margin: -2px 0 0;
+}
+.tokenBalance {
+  border-right: 0.1rem solid #949494;
+  text-align: right;
+}
+.tokenBalance h5 {
+  color: #ff6600;
+  margin-right: 20px;
+}
+.tokenBalance p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.balance {
+  margin: 0 0 30px;
+}
+.btn-dan {
+  background-color: #ff6600;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  color: #ece2e2;
+  text-decoration: none;
+}
+.btn-dan:hover,
+.btn-da:hover {
+  color: #ece2e2;
+}
+.btn-da {
+  background-color: #000;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  color: #ece2e2;
+  text-decoration: none;
+}
+
+.filter_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter_col_2 {
+  margin: 0 0 0 auto;
+}
+.filter_col_2 #search {
+  width: 7rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #949494;
+  padding: 0.1rem;
+}
+
+.filter_col_2 #submit {
+  color: #ece2e2;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 2px;
+  padding: 0.1rem 0.8rem;
+  margin: 0 0 0 4px;
+}
+
+.iconPlay {
+  background-color: #e7e8e8;
+  color: #ff6600;
+  border-radius: 50px;
+  padding: 0 5px 3px;
+}
+
+.dashInnerWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashText {
+  margin: 0 0 0 10px;
+}
+/* ................................Form................... */
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_input {
+  width: 100%;
+  border: 1px solid #ff6600;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  margin: 2px 0;
+}
+
+.form_input::placeholder {
+  padding-left: 10px;
+}
+
+.form_btn {
+  margin: 0.5rem 0 0 0;
+  border: none;
+  background-color: #ff6600;
+  color: #e7e8e8;
+  padding: 0.3rem 10px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* ---------------------------------------------------Spinner-------------------------------------------- */
+
+.spinnerContainer {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+}
+
+#loading {
+  background: linear-gradient(360deg, #115, #115);
+  border: 10px solid #2642af;
+  border-radius: 50%;
+  border-top: 10px solid #feb;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#spinImage {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /* animation: spinImage 1s linear infinite; */
+}
+.spinImage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@keyframes spinImage {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* ...............................loading.......................... */
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #e7e8e8;
+}
+
+.spinnerLoading {
+  background-color: #000;
+  color: #ff6600;
+  padding: 20px;
+  align-self: center;
+  border-radius: 5px;
+  text-align: center;
+}
+.spinnerLoading p {
+  color: #e7e8e8;
+}
+
+.spinnerLoading p:last-child {
+  margin-top: -10px;
+}
+
+.spinnerP {
+  animation: p_spinner 1s linear infinite;
+}
+@keyframes p_spinner {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* .....................................Spinner two..................... */
+.spinnerWrapper {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+/* 
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+/* ..........................login and register.................. */
+.logRegWrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.logReg {
+  align-self: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* ...............................Admin Confirm..................... */
+.confirmWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(231, 232, 232, 0.8);
+}
+
+/* .........................Refer.................... */
+.referWrapper {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.refer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.referB {
+  align-self: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+/* .............................footer............................ */
+
+.footer {
+  background-color: #1c1c1c;
+  padding: 30px 10px 10px;
+  color: #e7e8e8;
+  margin: 200px 0 0;
+}
+
+.links {
+  background-color: #ff6600;
+  padding: 0.2rem 0.4rem 0.4rem;
+  border-radius: 5px;
+  color: #ece2e2;
+}
+
+.links:hover {
+  color: #ece2e2;
+}
+.copy-right {
+  margin-top: 20px;
+}
+
+.copy-right p {
+  font-size: 0.7rem;
+}
+/* ..................media query.......................... */
+@media screen and (max-width: 900px) {
+  .dash p {
+    width: 100%;
+  }
+}
+
+/* #1c1c1c */
+/* #2D3344 */
+/* #0A142F */
+/* #ff6600 */
+/* #000000 */
+/*color: #FF4848 */
+/* #949494 */
+/*color:#ECE2E2 */
+/* color: #434141 */
+/* color: #655F5F */

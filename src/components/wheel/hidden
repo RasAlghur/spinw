@@ -1,0 +1,37 @@
+      //   setTimeout(() => {
+      //     var countDownTarget = new Date().getTime() + 15 * 60 * 1000;
+
+      //   function showClock(target) {
+      //     const distance = target - new Date().getTime();
+      //     const mins = distance < 0 ? 0: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      //     const secs = distance < 0 ? 0: Math.floor((distance % (1000 * 60)) / 1000);
+
+      //     // Output the results
+      //     console.log("Minutes " + mins + " Seconds" + secs );
+      //     // document.getElementById("seconds").innerHTML = secs;
+      //   }
+
+      //   showClock(countDownTarget);
+
+      //   // Update the count down every 1 second
+      //   var x = setInterval(function() {
+      //       showClock(countDownTarget);
+      //       if (countDownTarget - new Date().getTime() < 0) {
+      //         clearInterval(x);
+      //   }
+
+      //   }, 1000)
+
+      // }, 5000);
+
+          // const changeHandle = (e) => {
+    //     setPost({ ...post, [e.target.name]: e.target.value })
+    // }
+
+    // const changeAddress = (user) => {
+    //     setPost({ ...post, 'userAddress': user })
+    // }
+
+    // const userReward = (gift) => {
+    //     setPost({ ...post, 'reward': gift })
+    // }

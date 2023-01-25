@@ -1,0 +1,143 @@
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  align-items: center;
+  z-index: 30;
+  top: 0;
+  background-color: #000;
+  color: #ff6600;
+}
+
+.nav {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.logo {
+  text-decoration: none;
+  color: #ece2e2;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  text-transform: capitalize;
+}
+.logoSpan {
+  color: #ff6600;
+}
+
+.logo_image {
+  margin: -5px -4px 0 0;
+}
+
+.nav__menu-bar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+  margin: 0 20px 0 auto;
+}
+
+.nav__menu-bar div {
+  width: 30px;
+  height: 4px;
+  background-color: #ff6600;
+  border-radius: 2px;
+}
+
+.nav__menu-list {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  row-gap: 10px;
+  right: -100%;
+  padding: 1rem 16px;
+  transition: all 0.2s;
+  height: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #ff6600;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+.nav__menu-list.active {
+  right: 0;
+}
+
+.nav__link {
+  font-size: 1.2rem;
+  position: relative;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #ece2e2;
+  font-weight: 500;
+  padding: 0.3rem;
+  border-radius: 2px;
+}
+.nav__link:hover {
+  color: #ff6600;
+}
+
+.activated {
+  color: #ff6600;
+  font-weight: 550;
+  padding: 0.3rem 1rem;
+  border-radius: 2px;
+}
+
+.center {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__menu-bar {
+    display: none;
+  }
+
+  .nav__menu-list {
+    position: unset;
+    flex-direction: row;
+    min-height: fit-content;
+    height: 0;
+    width: fit-content;
+    column-gap: 4px;
+    align-items: center;
+  }
+
+  .nav__link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 6px;
+    bottom: -16px;
+    left: 0;
+    background-color: black;
+    transition: all 0.2s;
+  }
+
+  .nav__link:hover:before {
+    width: 100%;
+  }
+}
+
+/* @media screen and (max-width: 400px) {
+  .nav__menu-list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+} */
